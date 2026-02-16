@@ -76,17 +76,11 @@ CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "channels_redis.core.RedisChannelLayer",
         "CONFIG": {
-            "hosts": [
-                {
-                    "address": os.environ["REDIS_HOST"], 
-                    "port": int(os.environ["REDIS_PORT"]),
-                    "password": os.environ["REDIS_PASSWORD"],
-                    "ssl": True, 
-                }
-            ],
+            "hosts": [os.environ.get("REDIS_URL")],
         },
     },
 }
+
 
 # CORS
 CORS_ALLOWED_ORIGINS = os.getenv(

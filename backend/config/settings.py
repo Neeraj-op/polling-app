@@ -83,7 +83,7 @@ CHANNEL_LAYERS = {
 
 # CORS
 CORS_ALLOWED_ORIGINS = os.getenv(
-    'CORS_ALLOWED_ORIGINS', 'http://localhost:5173').split(',')
+    'CORS_ALLOWED_ORIGINS', '').split(',')
 CORS_ALLOW_CREDENTIALS = True
 
 # REST Framework

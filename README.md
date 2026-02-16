@@ -1,15 +1,17 @@
-******Real-Time Poll Rooms:******
+## Real-Time Poll Rooms:
 
 A full-stack web application for creating and sharing real-time polls with instant vote updates using WebSockets.
 
 
-1. **Features**:
-Create Polls: Easy poll creation with custom questions and multiple options
-Real-Time Updates: See vote results update instantly across all connected clients
-Shareable Links: Each poll gets a unique URL for easy sharing
-Fair Voting: Built-in anti-abuse mechanisms to prevent duplicate votes
-Persistent Storage: All polls and votes are stored in PostgreSQL
-Modern UI: Clean, responsive interface with smooth animations
+1. **Features**
+
+- **Create Polls:** Easy poll creation with custom questions and multiple options
+- **Real-Time Updates:** See vote results update instantly across all connected clients
+- **Shareable Links:** Each poll gets a unique URL for easy sharing
+- **Fair Voting:** Built-in anti-abuse mechanisms to prevent duplicate votes
+- **Persistent Storage:** All polls and votes are stored in PostgreSQL
+- **Modern UI:** Clean, responsive interface with smooth animations
+
 
 2. **Fairness Mechanisms**:
 This application implements two distinct anti-abuse mechanisms to ensure fair voting:

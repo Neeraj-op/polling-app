@@ -73,12 +73,16 @@ DATABASES = {
 
 # Channels
 CHANNEL_LAYERS = {
-    'default': {
-        'BACKEND': 'channels_redis.core.RedisChannelLayer',
-        'CONFIG': {
-            "hosts": [(os.getenv('REDIS_HOST'), int(os.getenv('REDIS_PORT')),
-            {"password": os.environ.get("REDIS_PASSWORD")}
-            )],
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [
+                {
+                    "address": (os.environ.get("REDIS_HOST"), int(os.environ.get("REDIS_PORT"))),
+                    "password": os.environ.get("REDIS_PASSWORD"),
+                    "ssl": True, 
+                }
+            ],
         },
     },
 }

@@ -78,7 +78,8 @@ CHANNEL_LAYERS = {
         "CONFIG": {
             "hosts": [
                 {
-                    "address": (os.environ.get("REDIS_HOST"), int(os.environ.get("REDIS_PORT"))),
+                    "address": os.environ.get("REDIS_HOST"), 
+                    "port": int(os.environ.get("REDIS_PORT")),
                     "password": os.environ.get("REDIS_PASSWORD"),
                     "ssl": True, 
                 }

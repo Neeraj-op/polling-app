@@ -1,9 +1,9 @@
-Real-Time Poll Rooms:
+******Real-Time Poll Rooms:******
 
 A full-stack web application for creating and sharing real-time polls with instant vote updates using WebSockets.
 
 
-1. Features:
+1. **Features**:
 Create Polls: Easy poll creation with custom questions and multiple options
 Real-Time Updates: See vote results update instantly across all connected clients
 Shareable Links: Each poll gets a unique URL for easy sharing
@@ -11,7 +11,7 @@ Fair Voting: Built-in anti-abuse mechanisms to prevent duplicate votes
 Persistent Storage: All polls and votes are stored in PostgreSQL
 Modern UI: Clean, responsive interface with smooth animations
 
-2. Fairness Mechanisms
+2. **Fairness Mechanisms**:
 This application implements two distinct anti-abuse mechanisms to ensure fair voting:
     2.1. IP-Based Limiting:
             What it prevents: Multiple votes from the same network/location
@@ -49,45 +49,45 @@ This application implements two distinct anti-abuse mechanisms to ensure fair vo
             Clearing browser data resets the fingerprint
             Not foolproof against determined attackers
 
-    Combined Protection
-    By using both mechanisms together:
+       **Combined Protection**
+        By using both mechanisms together:
 
-    Casual duplicate voting is effectively blocked
-    Multiple bypass methods would be needed simultaneously
-    Provides reasonable protection for typical use cases
-    Balance between security and user experience (no login required)
+        Casual duplicate voting is effectively blocked
+        Multiple bypass methods would be needed simultaneously
+        Provides reasonable protection for typical use cases
+        Balance between security and user experience (no login required)
 
-3. Additional Future Considerations
+3. **Additional Future Considerations**
 
-User authentication (OAuth, email verification)
-CAPTCHA for vote submission
-Rate limiting per IP address
-Time-based voting windows
+        User authentication (OAuth, email verification)
+        CAPTCHA for vote submission
+        Rate limiting per IP address
+        Time-based voting windows
 
-4. Tech Stack
+4. **Tech Stack**
 
-Backend
+        Backend
 
-Python 3.11+
-Django 5.0 - Web framework
-Django REST Framework - API endpoints
-Django Channels - WebSocket support
-PostgreSQL - Database
-Redis - Channel layer for real-time messaging
-Daphne - ASGI server
+        Python 3.11+
+        Django 5.0 - Web framework
+        Django REST Framework - API endpoints
+        Django Channels - WebSocket support
+        PostgreSQL - Database
+        Redis - Channel layer for real-time messaging
+        Daphne - ASGI server
 
-Frontend
+        Frontend
+        
+        React 18 - UI library
+        Vite - Build tool and dev server
+        React Router - Client-side routing
+        Axios - HTTP client
+        WebSocket API - Real-time communication
 
-React 18 - UI library
-Vite - Build tool and dev server
-React Router - Client-side routing
-Axios - HTTP client
-WebSocket API - Real-time communication
-
-Deployment
-
-Render - Backend hosting
-Vercel - Frontend hosting
-Upstash Redis - Managed Redis
+        Deployment
+        
+        Render - Backend hosting
+        Vercel - Frontend hosting
+        Upstash Redis - Managed Redis
 
 
